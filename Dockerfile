@@ -59,7 +59,7 @@ RUN git clone https://github.com/aws-samples/aws-iot-securetunneling-localproxy 
 	cd aws-iot-securetunneling-localproxy && \
 	mkdir build && \
 	cd build && \
-	cmake ../ && \
+	cmake -DBoost_USE_STATIC_LIBS=ON -DProtobuf_USE_STATIC_LIBS=ON ../ && \
 	make
 
 # If you'd like to use this Dockerfile to build your LOCAL revisions to the
